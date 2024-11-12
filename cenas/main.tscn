@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brgvmhg2utovs"]
+
+[ext_resource type="PackedScene" path="res://cenas/player.tscn" id="1_ipsm8"]
+[ext_resource type="PackedScene" uid="uid://deerkiaxer0gm" path="res://cenas/letter.tscn" id="2_q6wpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmi7"]
+size = Vector2(1362, 20)
+
+[node name="main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_ipsm8")]
+
+[node name="chão" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chão"]
+position = Vector2(617, 626)
+shape = SubResource("RectangleShape2D_hgmi7")
+debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
+
+[node name="letter" parent="." instance=ExtResource("2_q6wpr")]
