@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://deerkiaxer0gm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yd1pb"]
+
+[node name="letter" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yd1pb")
+debug_color = Color(0.494118, 0.552941, 0.517647, 0.419608)
