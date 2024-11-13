@@ -13,7 +13,7 @@ size = Vector2(1362, 20)
 [node name="chão" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chão"]
-position = Vector2(617, 626)
+position = Vector2(640, 693)
 shape = SubResource("RectangleShape2D_hgmi7")
 debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
 
