@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://brgvmhg2utovs"]
 
-[ext_resource type="PackedScene" path="res://cenas/player.tscn" id="1_ipsm8"]
+[ext_resource type="PackedScene" uid="uid://dmndlfx853o03" path="res://cenas/player.tscn" id="1_ipsm8"]
 [ext_resource type="PackedScene" uid="uid://deerkiaxer0gm" path="res://cenas/letter.tscn" id="2_q6wpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmi7"]
