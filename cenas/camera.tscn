@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1uxa2fxkd071"]
+
+[ext_resource type="PackedScene" uid="uid://p3mswtv8eo2g" path="res://cenas/word.tscn" id="1_msp2y"]
+
+[node name="camera" type="Camera2D"]
+
+[node name="word" parent="." instance=ExtResource("1_msp2y")]

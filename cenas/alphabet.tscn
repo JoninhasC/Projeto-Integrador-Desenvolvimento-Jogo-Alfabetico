@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://81fgrk4n0gtp"]
+
+[ext_resource type="Script" path="res://scripts/alphabet.gd" id="1_ypl1g"]
+[ext_resource type="PackedScene" uid="uid://be5e7f731o2g1" path="res://cenas/E.tscn" id="2_x2vjn"]
+[ext_resource type="PackedScene" uid="uid://bcbasprws8vut" path="res://cenas/D.tscn" id="3_k08mt"]
+[ext_resource type="PackedScene" uid="uid://bkn1jrvvontyu" path="res://cenas/C.tscn" id="4_bxgma"]
+[ext_resource type="PackedScene" uid="uid://s7rcxlughjlp" path="res://cenas/B.tscn" id="5_niddl"]
+[ext_resource type="PackedScene" uid="uid://bunhbuv2wqon5" path="res://cenas/A.tscn" id="6_jrdc2"]
+
+[node name="alphabet" type="Node2D" groups=["alfabeto"]]
+script = ExtResource("1_ypl1g")
+
+[node name="E" parent="." instance=ExtResource("2_x2vjn")]
+collision_mask = 5
+
+[node name="D" parent="." instance=ExtResource("3_k08mt")]
+collision_mask = 5
+
+[node name="C" parent="." instance=ExtResource("4_bxgma")]
+collision_mask = 5
+
+[node name="B" parent="." groups=["alfabeto"] instance=ExtResource("5_niddl")]
+collision_mask = 5
+
+[node name="A" parent="." groups=["alfabeto"] instance=ExtResource("6_jrdc2")]

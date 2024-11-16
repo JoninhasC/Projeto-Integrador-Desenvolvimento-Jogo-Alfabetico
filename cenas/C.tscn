@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkn1jrvvontyu"]
+
+[ext_resource type="Texture2D" uid="uid://dsukikgqpfuh6" path="res://sprites/Letters/Yellow/letter_C.png" id="1_ugwgw"]
+[ext_resource type="PackedScene" uid="uid://c8s7el51i652r" path="res://cenas/hitbox.tscn" id="2_seefi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5h15"]
+size = Vector2(14, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h02f8"]
+
+[node name="C" type="CharacterBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.499998, -0.499998)
+scale = Vector2(0.0820312, 0.0820312)
+texture = ExtResource("1_ugwgw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_v5h15")
+
+[node name="hitbox" parent="." instance=ExtResource("2_seefi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_h02f8")
+debug_color = Color(0.913725, 0.282353, 0.145098, 0.419608)

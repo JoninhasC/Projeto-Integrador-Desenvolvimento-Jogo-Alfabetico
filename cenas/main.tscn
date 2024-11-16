@@ -1,20 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://brgvmhg2utovs"]
+[gd_scene load_steps=6 format=3 uid="uid://bilhtk8qhmik8"]
 
-[ext_resource type="PackedScene" path="res://cenas/player.tscn" id="1_ipsm8"]
-[ext_resource type="PackedScene" uid="uid://deerkiaxer0gm" path="res://cenas/letter.tscn" id="2_q6wpr"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_1xu0v"]
+[ext_resource type="PackedScene" uid="uid://bsbh06e6nusi8" path="res://cenas/player.tscn" id="1_ipsm8"]
+[ext_resource type="PackedScene" uid="uid://81fgrk4n0gtp" path="res://cenas/alphabet.tscn" id="3_4dcsc"]
+[ext_resource type="PackedScene" uid="uid://d1uxa2fxkd071" path="res://cenas/camera.tscn" id="4_dxi6a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmi7"]
 size = Vector2(1362, 20)
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_1xu0v")
 
 [node name="player" parent="." instance=ExtResource("1_ipsm8")]
 
 [node name="chão" type="StaticBody2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chão"]
-position = Vector2(617, 626)
+position = Vector2(573, 677)
 shape = SubResource("RectangleShape2D_hgmi7")
 debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
 
-[node name="letter" parent="." instance=ExtResource("2_q6wpr")]
+[node name="alphabet" parent="." instance=ExtResource("3_4dcsc")]
+
+[node name="camera" parent="." instance=ExtResource("4_dxi6a")]

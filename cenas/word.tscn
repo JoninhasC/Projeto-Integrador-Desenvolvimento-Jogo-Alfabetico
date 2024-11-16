@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://p3mswtv8eo2g"]
+
+[ext_resource type="Script" path="res://scripts/word.gd" id="1_we6yr"]
+
+[node name="word" type="Label"]
+script = ExtResource("1_we6yr")

@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmndlfx853o03"]
+[gd_scene load_steps=3 format=3 uid="uid://bsbh06e6nusi8"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pbnai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ksis"]
+size = Vector2(14, 17)
 
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_pbnai")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2ksis")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="remote" type="RemoteTransform2D" parent="."]
