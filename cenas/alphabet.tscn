@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=3 uid="uid://03mslllgj3oq"]
+
+[ext_resource type="Script" path="res://scripts/alphabet.gd" id="1_tg3md"]
+[ext_resource type="PackedScene" uid="uid://cmjiumseij7re" path="res://cenas/A.tscn" id="2_4yuth"]
+[ext_resource type="PackedScene" uid="uid://bvqnnet7wmpy4" path="res://cenas/B.tscn" id="3_cpfxa"]
+[ext_resource type="PackedScene" uid="uid://4xr7ius48kq2" path="res://cenas/C.tscn" id="4_aq6li"]
+[ext_resource type="PackedScene" uid="uid://bk341urlbxoob" path="res://cenas/D.tscn" id="5_irueg"]
+[ext_resource type="PackedScene" uid="uid://bhk8v4u6kqysf" path="res://cenas/E.tscn" id="6_j4ehc"]
+
+[node name="alphabet" type="Node2D"]
+script = ExtResource("1_tg3md")
+
+[node name="A" parent="." instance=ExtResource("2_4yuth")]
+
+[node name="B" parent="." instance=ExtResource("3_cpfxa")]
+
+[node name="C" parent="." instance=ExtResource("4_aq6li")]
+
+[node name="D" parent="." instance=ExtResource("5_irueg")]
+
+[node name="E" parent="." instance=ExtResource("6_j4ehc")]
