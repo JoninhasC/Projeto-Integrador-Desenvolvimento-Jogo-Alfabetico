@@ -4,7 +4,8 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_jumping := false
-@onready var animation := $AnimatedSprite2D 
+#@onready var animation := $AnimatedSprite2D 
+@onready var remote_transform := $remote as RemoteTransform2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -31,3 +32,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 #		animation.play("Casting_Spell_(32 x 32)")
 	move_and_slide()
+	
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path

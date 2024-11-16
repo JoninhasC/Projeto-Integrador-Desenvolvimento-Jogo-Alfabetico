@@ -10,4 +10,4 @@ script = ExtResource("1_pbnai")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2ksis")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="remote" type="RemoteTransform2D" parent="."]
