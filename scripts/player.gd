@@ -8,6 +8,7 @@ var is_jumping := false
 @onready var remote_transform := $remote as RemoteTransform2D
 
 func _physics_process(delta: float) -> void:
+	zerar_vidas(Global.vida)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -36,3 +37,7 @@ func _physics_process(delta: float) -> void:
 func follow_camera(camera):
 	var camera_path = camera.get_path()
 	remote_transform.remote_path = camera_path
+	
+func zerar_vidas(vidas):
+	if Global.vida == 0:
+		queue_free()
