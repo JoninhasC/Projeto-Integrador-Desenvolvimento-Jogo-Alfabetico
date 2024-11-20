@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ebke2ewehv2o"]
+[gd_scene load_steps=3 format=3 uid="uid://ebke2ewehv2o"]
+
+[ext_resource type="Script" path="res://scripts/hitbox.gd" id="1_vnj4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrxkr"]
 size = Vector2(25, 25)
@@ -6,8 +8,11 @@ size = Vector2(25, 25)
 [node name="hitbox" type="Area2D"]
 collision_layer = 8
 collision_mask = 2
+script = ExtResource("1_vnj4m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_vrxkr")
 debug_color = Color(0.968627, 0.14902, 0.223529, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

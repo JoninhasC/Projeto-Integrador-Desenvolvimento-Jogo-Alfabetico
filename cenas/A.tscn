@@ -16,9 +16,19 @@ shape = SubResource("RectangleShape2D_12whp")
 [node name="hitbox" parent="." instance=ExtResource("1_67wtb")]
 script = ExtResource("2_xu57p")
 
-[node name="A" type="Sprite2D" parent="."]
+[node name="amarelo" type="Sprite2D" parent="."]
 position = Vector2(0.999996, 1)
 scale = Vector2(0.09375, 0.09375)
 texture = ExtResource("3_owbtn")
+
+[node name="azul" type="Sprite2D" parent="."]
+
+[node name="marron" type="Sprite2D" parent="."]
+
+[node name="madeira" type="Sprite2D" parent="."]
+
+[node name="cinzaclaro" type="Sprite2D" parent="."]
+
+[node name="cinzaescuro" type="Sprite2D" parent="."]
 
 [connection signal="body_entered" from="hitbox" to="hitbox" method="_on_body_entered"]
