@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbg5kxouirl2"]
+
+[ext_resource type="PackedScene" uid="uid://ebke2ewehv2o" path="res://cenas/hitbox.tscn" id="1_x2hk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfmvn"]
+
+[node name="Z" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gfmvn")
+
+[node name="amarelo" type="Sprite2D" parent="."]
+
+[node name="hitbox" parent="." instance=ExtResource("1_x2hk0")]
+
+[node name="azul" type="Sprite2D" parent="."]
+
+[node name="marron" type="Sprite2D" parent="."]
+
+[node name="madeira" type="Sprite2D" parent="."]
+
+[node name="cinzaclaro" type="Sprite2D" parent="."]
+
+[node name="cinzaescuro" type="Sprite2D" parent="."]
