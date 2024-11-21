@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://myy4d7ghsn0r"]
+
+[ext_resource type="Script" path="res://scripts/plataforma_movel.gd" id="1_07ayg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipi3p"]
+
+[node name="plataforma_movel" type="Node2D"]
+script = ExtResource("1_07ayg")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_ipi3p")
+debug_color = Color(0.807843, 0, 0.686275, 0.929412)
