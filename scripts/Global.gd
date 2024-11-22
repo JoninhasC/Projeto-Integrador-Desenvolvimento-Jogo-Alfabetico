@@ -10,3 +10,5 @@ var labels = []
 #var cor_do_sprite = ["amarelo", "azul", "marrom", "madeira", "cinzaclaro", "cinzaescuro"]
 #>>>>>>> main
 var vida = 3
+
+var cor_atual : int = 0
