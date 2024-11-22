@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk341urlbxoob"]
+[gd_scene load_steps=4 format=3 uid="uid://bynyxcjwwlfhy"]
 
 [ext_resource type="PackedScene" uid="uid://ebke2ewehv2o" path="res://cenas/hitbox.tscn" id="1_8saxa"]
-[ext_resource type="Script" path="res://scripts/hitbox.gd" id="2_mqybe"]
-[ext_resource type="Texture2D" uid="uid://ci88gtawkoxqu" path="res://sprites/LETTERS/Yellow/letter_D.png" id="3_rjmar"]
+[ext_resource type="Texture2D" uid="uid://ci88gtawkoxqu" path="res://sprites/LETTERS/amarelo/letter_D.png" id="2_mvyhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12whp"]
 
@@ -14,21 +13,8 @@ collision_mask = 5
 shape = SubResource("RectangleShape2D_12whp")
 
 [node name="hitbox" parent="." instance=ExtResource("1_8saxa")]
-script = ExtResource("2_mqybe")
 
-[node name="amarelo" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3.8147e-06, -3.8147e-06)
 scale = Vector2(0.0859375, 0.0859375)
-texture = ExtResource("3_rjmar")
-
-[node name="azul" type="Sprite2D" parent="."]
-
-[node name="marron" type="Sprite2D" parent="."]
-
-[node name="madeira" type="Sprite2D" parent="."]
-
-[node name="cinzaclaro" type="Sprite2D" parent="."]
-
-[node name="cinzaescuro" type="Sprite2D" parent="."]
-
-[connection signal="body_entered" from="hitbox" to="hitbox" method="_on_body_entered"]
+texture = ExtResource("2_mvyhn")

@@ -13,14 +13,4 @@ shape = SubResource("RectangleShape2D_gfmvn")
 
 [node name="hitbox" parent="." instance=ExtResource("1_0esh0")]
 
-[node name="amarelo" type="Sprite2D" parent="."]
-
-[node name="azul" type="Sprite2D" parent="."]
-
-[node name="marron" type="Sprite2D" parent="."]
-
-[node name="madeira" type="Sprite2D" parent="."]
-
-[node name="cinzaclaro" type="Sprite2D" parent="."]
-
-[node name="cinzaescuro" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
