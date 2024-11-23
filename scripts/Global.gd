@@ -11,3 +11,32 @@ var cores_path = ["azul", "cinza_claro", "cinza_escuro", "madeira", "marrom", "a
 var vida = 3
 
 var cor_atual : int = 0
+
+var nivel : String 
+var modalidade : String
+var nivel_modalidade = [
+	{
+		"nivel": "facil",
+		"categorias": {
+			"animais": ["asa", "boi", "gato", "pato", "rato", "sapo"],
+			"frutas": ["uva", "figo", "maçã", "pera"],
+			"objetos": ["bola", "casa", "dado", "faca", "lua", "mesa", "sol"]
+		}
+	},
+	{
+		"nivel": "intermediario",
+		"categorias": {
+			"animais": ["cabras", "coelho", "girafa", "macaco", "ovelha", "tigres"],
+			"frutas": ["banana", "limão", "mamão", "melão"],
+			"objetos": ["cadeira", "escada", "janela", "lápis", "quadro"]
+		}
+	},
+	{
+		"nivel": "dificil",
+		"categorias": {
+			"animais": ["borboleta", "elefante", "papagaio", "tartaruga"],
+			"frutas": ["abacaxi", "morango", "melancia"],
+			"objetos": ["bicicleta", "geladeira", "telefone", "televisão"]
+		}
+	}
+]
