@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqwrwm4qyhvnr"]
+
+[ext_resource type="Script" path="res://niveis.gd" id="1_1umhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lffou"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg4ij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl6v5"]
+
+[node name="niveis" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1umhr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1097.0
+offset_bottom = 698.0
+color = Color(0.921569, 0.478431, 0.360784, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 150.0
+offset_right = 1061.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 56
+text = "SELECIONE O NÍVEL DE DIFICULDADE:"
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 415.0
+offset_right = 768.0
+offset_bottom = 701.0
+
+[node name="facil" type="Button" parent="CenterContainer" groups=["botoes_dos_niveis"]]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.74902, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lffou")
+text = "FACIL"
+flat = true
+
+[node name="intermediario" type="Button" parent="CenterContainer" groups=["botoes_dos_niveis"]]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.74902, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fg4ij")
+text = "INTERMEDIARIO"
+flat = true
+
+[node name="dificil" type="Button" parent="CenterContainer" groups=["botoes_dos_niveis"]]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.960784, 0.74902, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pl6v5")
+text = "DIFÍCIL"
+flat = true

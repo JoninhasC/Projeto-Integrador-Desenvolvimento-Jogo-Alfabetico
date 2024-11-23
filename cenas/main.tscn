@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://brgvmhg2utovs"]
+[gd_scene load_steps=42 format=3 uid="uid://brgvmhg2utovs"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_13j02"]
 [ext_resource type="Texture2D" uid="uid://d3ecfofdhjbdu" path="res://sprites/Mapa Neve/png/Tiles/9.png" id="1_djky7"]
@@ -20,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://clih5400akehx" path="res://sprites/Mapa Neve/png/Tiles/8.png" id="16_muefc"]
 [ext_resource type="PackedScene" uid="uid://03mslllgj3oq" path="res://cenas/alphabet.tscn" id="19_b7d1o"]
 [ext_resource type="PackedScene" uid="uid://rx32pk1n4di0" path="res://cenas/camera.tscn" id="20_mpuuk"]
+[ext_resource type="PackedScene" uid="uid://dqwrwm4qyhvnr" path="res://cenas/niveis.tscn" id="22_sudka"]
 [ext_resource type="Script" path="res://scripts/Global.gd" id="22_w0wu7"]
+[ext_resource type="PackedScene" uid="uid://b442sren0yyh4" path="res://cenas/modalidade.tscn" id="23_k1mgc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27goi"]
 texture = ExtResource("1_djky7")
@@ -149,6 +151,10 @@ size = Vector2(1362, 20)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_13j02")
+
+[node name="niveis" parent="." instance=ExtResource("22_sudka")]
+
+[node name="modalidade" parent="." instance=ExtResource("23_k1mgc")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_j4edw")
