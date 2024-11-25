@@ -24,3 +24,4 @@ func verifica_se_letra_colidida_nao_esta_na_word(colisao):
 	for posicao_indice in range(Global.caracteres_do_alfabeto_sem_palavra.size()):
 		if Global.caracteres_do_alfabeto_sem_palavra[posicao_indice] == colisao:
 			Global.vida -= 1
+			Global.erros += 1
