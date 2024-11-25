@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://brgvmhg2utovs"]
+[gd_scene load_steps=43 format=3 uid="uid://brgvmhg2utovs"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_13j02"]
 [ext_resource type="Texture2D" uid="uid://d3ecfofdhjbdu" path="res://sprites/Mapa Neve/png/Tiles/9.png" id="1_djky7"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dqwrwm4qyhvnr" path="res://cenas/niveis.tscn" id="22_sudka"]
 [ext_resource type="Script" path="res://scripts/Global.gd" id="22_w0wu7"]
 [ext_resource type="PackedScene" uid="uid://b442sren0yyh4" path="res://cenas/modalidade.tscn" id="23_k1mgc"]
+[ext_resource type="PackedScene" uid="uid://dyjqqtsb3fvdx" path="res://cenas/pause_menu.tscn" id="24_naaed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27goi"]
 texture = ExtResource("1_djky7")
@@ -186,3 +187,5 @@ debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
 
 [node name="Global" type="Node2D" parent="."]
 script = ExtResource("22_w0wu7")
+
+[node name="pause_menu" parent="." instance=ExtResource("24_naaed")]
