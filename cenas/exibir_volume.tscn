@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgylh4gbe2jsb"]
+
+[ext_resource type="Script" path="res://scripts/exibir_volume.gd" id="1_6kaoy"]
+
+[node name="exibir_volume" type="Label"]
+offset_left = 429.0
+offset_top = 76.0
+offset_right = 643.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 48
+script = ExtResource("1_6kaoy")

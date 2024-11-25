@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://mqneejjyd62i"]
+[gd_scene load_steps=6 format=3 uid="uid://mqneejjyd62i"]
 
 [ext_resource type="PackedScene" uid="uid://cvroq7lglpd3o" path="res://cenas/niveis.tscn" id="1_gvwj5"]
 [ext_resource type="PackedScene" uid="uid://b442sren0yyh4" path="res://cenas/modalidade.tscn" id="2_dd6xw"]
 [ext_resource type="PackedScene" uid="uid://b27whwj2x3vmk" path="res://cenas/gameover.tscn" id="3_62or1"]
+[ext_resource type="PackedScene" uid="uid://bre4qn0ljfnj7" path="res://cenas/configuracoes.tscn" id="4_d473o"]
+[ext_resource type="Script" path="res://scripts/configuracoes.gd" id="5_imcmw"]
 
 [node name="interfaces" type="Control"]
 layout_mode = 3
@@ -17,3 +19,6 @@ grow_vertical = 2
 [node name="niveis" parent="." instance=ExtResource("1_gvwj5")]
 
 [node name="gameover" parent="." instance=ExtResource("3_62or1")]
+
+[node name="configuracoes" parent="." instance=ExtResource("4_d473o")]
+script = ExtResource("5_imcmw")
