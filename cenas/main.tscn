@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://brgvmhg2utovs"]
+[gd_scene load_steps=41 format=3 uid="uid://brgvmhg2utovs"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_13j02"]
 [ext_resource type="Texture2D" uid="uid://d3ecfofdhjbdu" path="res://sprites/Mapa Neve/png/Tiles/9.png" id="1_djky7"]
@@ -20,9 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://clih5400akehx" path="res://sprites/Mapa Neve/png/Tiles/8.png" id="16_muefc"]
 [ext_resource type="PackedScene" uid="uid://03mslllgj3oq" path="res://cenas/alphabet.tscn" id="19_b7d1o"]
 [ext_resource type="PackedScene" uid="uid://rx32pk1n4di0" path="res://cenas/camera.tscn" id="20_mpuuk"]
-[ext_resource type="PackedScene" uid="uid://dqwrwm4qyhvnr" path="res://cenas/niveis.tscn" id="22_sudka"]
 [ext_resource type="Script" path="res://scripts/Global.gd" id="22_w0wu7"]
-[ext_resource type="PackedScene" uid="uid://b442sren0yyh4" path="res://cenas/modalidade.tscn" id="23_k1mgc"]
 [ext_resource type="PackedScene" uid="uid://dyjqqtsb3fvdx" path="res://cenas/pause_menu.tscn" id="24_naaed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27goi"]
@@ -150,14 +148,13 @@ sources/21 = SubResource("TileSetAtlasSource_ftlux")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmi7"]
 size = Vector2(1362, 20)
 
-[node name="main" type="Node2D"]
+[node name="Global" type="Node2D"]
+script = ExtResource("22_w0wu7")
+
+[node name="main" type="Node2D" parent="."]
 script = ExtResource("1_13j02")
 
-[node name="niveis" parent="." instance=ExtResource("22_sudka")]
-
-[node name="modalidade" parent="." instance=ExtResource("23_k1mgc")]
-
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="main"]
 tile_set = SubResource("TileSet_j4edw")
 format = 2
 layer_0/name = "terreno"
@@ -170,22 +167,19 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(1900574, 1179669, 6, 1900611, 1179669, 6, 1900634, 1441813, 6, 1900567, 1507349, 0, 1900550, 1507349, 0, 1900622, 1507349, 0, 2228269, 1900565, 0, 1966093, 1376277, 1, 1966153, 1376277, 1, 2359346, 1376277, 1, 2031614, 983061, 0, 1966080, 983061, 0, 1900543, 983061, 0, 1966099, 1376277, 3, 1966163, 1179669, 3)
 
-[node name="player" parent="." instance=ExtResource("1_ipsm8")]
+[node name="player" parent="main" instance=ExtResource("1_ipsm8")]
 collision_layer = 2
 collision_mask = 13
 
-[node name="chão" type="StaticBody2D" parent="."]
+[node name="chão" type="StaticBody2D" parent="main"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chão"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="main/chão"]
 position = Vector2(640, 693)
 shape = SubResource("RectangleShape2D_hgmi7")
 debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
 
-[node name="alphabet" parent="." instance=ExtResource("19_b7d1o")]
+[node name="alphabet" parent="main" instance=ExtResource("19_b7d1o")]
 
-[node name="camera" parent="." instance=ExtResource("20_mpuuk")]
+[node name="camera" parent="main" instance=ExtResource("20_mpuuk")]
 
-[node name="Global" type="Node2D" parent="."]
-script = ExtResource("22_w0wu7")
-
-[node name="pause_menu" parent="." instance=ExtResource("24_naaed")]
+[node name="pause_menu" parent="main" instance=ExtResource("24_naaed")]

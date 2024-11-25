@@ -7,9 +7,9 @@ var alfabeto : String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var caracteres_alfabeto : Array = alfabeto.split("")
 var caracteres_do_alfabeto_sem_palavra : Array = alfabeto.split("")
 var cores_path = ["azul", "cinza_claro", "cinza_escuro", "madeira", "marrom", "amarelo"]
-
+var caracteres_da_palavra : Array 
 var vida = 3
-
+var palavra : String 
 var cor_atual : int = 0
 
 var nivel : String 
