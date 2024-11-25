@@ -14,6 +14,8 @@ var cor_atual : int = 0
 var volume : int 
 var nivel : String 
 var modalidade : String
+var erros : int
+var acertos : int
 var nivel_modalidade = [
 	{
 		"nivel": "facil",

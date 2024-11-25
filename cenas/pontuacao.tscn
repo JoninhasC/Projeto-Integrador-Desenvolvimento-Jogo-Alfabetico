@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://q1d256novqb1"]
+
+[ext_resource type="Script" path="res://scripts/total_erros.gd" id="1_ap4wk"]
+[ext_resource type="Script" path="res://scripts/toral_acertos.gd" id="2_4ql21"]
+
+[sub_resource type="GDScript" id="GDScript_gmkkb"]
+script/source = "extends VBoxContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	get_node(\"pontuacao/total de erros\")
+	get_node(\"pontuacao/toral de acertos\")
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+
+"
+
+[node name="pontuacao" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_gmkkb")
+
+[node name="total_erros" type="Label" parent="."]
+layout_mode = 2
+script = ExtResource("1_ap4wk")
+
+[node name="toral_acertos" type="Label" parent="."]
+layout_mode = 2
+script = ExtResource("2_4ql21")

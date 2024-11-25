@@ -44,6 +44,7 @@ func selecionar_palavra_do_dicionario(nivel, modalidade):
 				
 func atualiza_cor_do_caractere_na_posicao(indice):
 	Global.labels[indice].modulate = Color(Global.cores[0])  # Aplica a cor específica ao índice
+	Global.acertos += 1
 	
 func remover_letras_que_estao_na_palavra_escolhida_e_no_alfabeto(string):
 	var copia_string = string.duplicate()
