@@ -11,7 +11,7 @@ var caracteres_da_palavra : Array
 var vida = 3
 var palavra : String 
 var cor_atual : int = 0
-
+var volume : int 
 var nivel : String 
 var modalidade : String
 var nivel_modalidade = [

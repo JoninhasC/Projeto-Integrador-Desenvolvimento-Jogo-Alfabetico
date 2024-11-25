@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://bre4qn0ljfnj7"]
+
+[ext_resource type="PackedScene" uid="uid://dgylh4gbe2jsb" path="res://cenas/exibir_volume.tscn" id="1_hovda"]
+
+[node name="configuracoes" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1057.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.921569, 0.478431, 0.360784, 1)
+
+[node name="exibir_volume" parent="." instance=ExtResource("1_hovda")]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 143.0
+offset_right = 614.0
+offset_bottom = 213.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 264.0
+offset_right = 802.0
+offset_bottom = 441.0
+
+[node name="menos" type="Button" parent="HBoxContainer" groups=["botoes_configuracao"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "DIMINUIR"
+flat = true
+
+[node name="mais" type="Button" parent="HBoxContainer" groups=["botoes_configuracao"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "AUMENTAR"
+flat = true
+
+[node name="mudo" type="Button" parent="HBoxContainer" groups=["botoes_configuracao"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "MUDO"
+flat = true
+
+[node name="sair" type="Button" parent="HBoxContainer" groups=["botoes_configuracao"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "SAIR"
+flat = true

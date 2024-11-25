@@ -42,5 +42,12 @@ layout_mode = 2
 text = "SAIR
 "
 
+[node name="btn_configuracoes" type="Button" parent="menu_holder"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_pyccl")
+text = "
+"
+
 [connection signal="pressed" from="menu_holder/btn_retomar" to="." method="_on_btn_retomar_pressed"]
 [connection signal="pressed" from="menu_holder/btn_sair" to="." method="_on_btn_sair_pressed"]
+[connection signal="pressed" from="menu_holder/btn_configuracoes" to="." method="_on_btn_configuracoes_pressed"]
