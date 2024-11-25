@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://rx32pk1n4di0"]
+[gd_scene load_steps=5 format=3 uid="uid://rx32pk1n4di0"]
 
 [ext_resource type="PackedScene" uid="uid://bj37cg7a7ixmh" path="res://cenas/word.tscn" id="1_bxx38"]
 [ext_resource type="PackedScene" uid="uid://cwju0q51lhwsc" path="res://cenas/vida.tscn" id="2_o8xr5"]
 [ext_resource type="PackedScene" uid="uid://q1d256novqb1" path="res://cenas/pontuacao.tscn" id="3_otf36"]
+[ext_resource type="PackedScene" uid="uid://csvx74h818uvi" path="res://cenas/imagem_da_palavra.tscn" id="4_86rgs"]
 
 [node name="camera" type="Camera2D"]
 
@@ -23,3 +24,9 @@ offset_left = -512.0
 offset_top = -312.0
 offset_right = -472.0
 offset_bottom = -262.0
+
+[node name="imagem_da_palavra" parent="." instance=ExtResource("4_86rgs")]
+offset_left = -385.0
+offset_top = -335.0
+offset_right = -345.0
+offset_bottom = -295.0
