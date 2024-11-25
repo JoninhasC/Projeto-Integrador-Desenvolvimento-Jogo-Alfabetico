@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqwrwm4qyhvnr"]
+[gd_scene load_steps=5 format=3 uid="uid://cvroq7lglpd3o"]
 
-[ext_resource type="Script" path="res://niveis.gd" id="1_1umhr"]
+[ext_resource type="Script" path="res://scripts/niveis.gd" id="1_yt01d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lffou"]
 
@@ -11,9 +11,7 @@
 [node name="niveis" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_1umhr")
+script = ExtResource("1_yt01d")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

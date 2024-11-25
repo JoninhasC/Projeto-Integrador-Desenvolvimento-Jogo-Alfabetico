@@ -41,3 +41,4 @@ func follow_camera(camera):
 func zerar_vidas(vidas):
 	if Global.vida == 0:
 		queue_free()
+		get_tree().change_scene_to_file("res://cenas/gameover.tscn")
