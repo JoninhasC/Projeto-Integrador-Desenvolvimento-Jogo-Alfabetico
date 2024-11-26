@@ -21,16 +21,16 @@ var nivel_modalidade = [
 		"nivel": "facil",
 		"categorias": {
 			"animais": ["asa", "boi", "gato", "pato", "rato", "sapo"],
-			"frutas": ["uva", "figo", "maçã", "pera"],
-			"objetos": ["bola", "casa", "dado", "faca", "lua", "mesa", "sol"]
+			"frutas": ["uva", "figo", "kiwi", "caju"],
+			"objetos": ["bola", "casa", "dado", "flor", "lua", "mesa", "sol"]
 		}
 	},
 	{
 		"nivel": "intermediario",
 		"categorias": {
 			"animais": ["cabras", "coelho", "girafa", "macaco", "ovelha", "tigres"],
-			"frutas": ["banana", "limão", "mamão", "melão"],
-			"objetos": ["cadeira", "escada", "janela", "lápis", "quadro"]
+			"frutas": ["banana", "ameixa", "goiaba", "lichia"],
+			"objetos": ["cadeira", "escada", "janela", "porta", "quadro"]
 		}
 	},
 	{
@@ -38,7 +38,7 @@ var nivel_modalidade = [
 		"categorias": {
 			"animais": ["borboleta", "elefante", "papagaio", "tartaruga"],
 			"frutas": ["abacaxi", "morango", "melancia"],
-			"objetos": ["bicicleta", "geladeira", "telefone", "televisão"]
+			"objetos": ["bicicleta", "geladeira", "telefone", "computador"]
 		}
 	}
 ]
