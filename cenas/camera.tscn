@@ -26,7 +26,7 @@ offset_right = -472.0
 offset_bottom = -262.0
 
 [node name="imagem_da_palavra" parent="." instance=ExtResource("4_86rgs")]
-offset_left = -385.0
-offset_top = -335.0
-offset_right = -345.0
-offset_bottom = -295.0
+offset_left = -522.0
+offset_top = -189.0
+offset_right = -482.0
+offset_bottom = -149.0
