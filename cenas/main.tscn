@@ -1,9 +1,10 @@
-[gd_scene load_steps=41 format=3 uid="uid://brgvmhg2utovs"]
+[gd_scene load_steps=42 format=3 uid="uid://brgvmhg2utovs"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_13j02"]
 [ext_resource type="Texture2D" uid="uid://d3ecfofdhjbdu" path="res://sprites/Mapa Neve/png/Tiles/9.png" id="1_djky7"]
 [ext_resource type="PackedScene" uid="uid://dmndlfx853o03" path="res://cenas/player.tscn" id="1_ipsm8"]
 [ext_resource type="Texture2D" uid="uid://5ga8u21h85t" path="res://sprites/Mapa Neve/png/Tiles/10.png" id="2_2kij4"]
+[ext_resource type="PackedScene" uid="uid://co3ym6itc0d7r" path="res://cenas/moeda.tscn" id="2_cfyo1"]
 [ext_resource type="Texture2D" uid="uid://8ljkc64mu3hj" path="res://sprites/Mapa Neve/png/Tiles/11.png" id="3_5w00p"]
 [ext_resource type="Texture2D" uid="uid://b3evrtyfhk632" path="res://sprites/Mapa Neve/png/Tiles/12.png" id="4_kr0yp"]
 [ext_resource type="Texture2D" uid="uid://d15mqmav14lpa" path="res://sprites/Mapa Neve/png/Tiles/13.png" id="5_1kvd4"]
@@ -183,3 +184,23 @@ debug_color = Color(0.807843, 0.4, 0.290196, 0.419608)
 [node name="camera" parent="main" instance=ExtResource("20_mpuuk")]
 
 [node name="pause_menu" parent="main" instance=ExtResource("24_naaed")]
+
+[node name="moedas" type="Node2D" parent="main"]
+
+[node name="moeda" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(72, 648)
+
+[node name="moeda2" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(616, 640)
+
+[node name="moeda3" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(536, 648)
+
+[node name="moeda4" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(416, 656)
+
+[node name="moeda5" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(232, 656)
+
+[node name="moeda6" parent="main/moedas" instance=ExtResource("2_cfyo1")]
+position = Vector2(160, 664)

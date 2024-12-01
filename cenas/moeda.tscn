@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://co3ym6itc0d7r"]
+
+[ext_resource type="Script" path="res://scripts/moeda.gd" id="1_00ygn"]
+[ext_resource type="Texture2D" uid="uid://cpul36qym80iw" path="res://sprites/moeda/coin_6178199-1x1 (1).png" id="1_ndo16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h8qwi"]
+radius = 32.0
+
+[node name="moeda" type="Area2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_00ygn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("1_ndo16")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h8qwi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

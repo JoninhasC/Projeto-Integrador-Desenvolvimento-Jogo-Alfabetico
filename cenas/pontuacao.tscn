@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://q1d256novqb1"]
+[gd_scene load_steps=5 format=3 uid="uid://q1d256novqb1"]
 
 [ext_resource type="Script" path="res://scripts/total_erros.gd" id="1_ap4wk"]
 [ext_resource type="Script" path="res://scripts/toral_acertos.gd" id="2_4ql21"]
+[ext_resource type="Script" path="res://scripts/total_moedas.gd" id="3_keeml"]
 
 [sub_resource type="GDScript" id="GDScript_gmkkb"]
 script/source = "extends VBoxContainer
@@ -34,3 +35,7 @@ script = ExtResource("1_ap4wk")
 [node name="toral_acertos" type="Label" parent="."]
 layout_mode = 2
 script = ExtResource("2_4ql21")
+
+[node name="total_moedas" type="Label" parent="."]
+layout_mode = 2
+script = ExtResource("3_keeml")
