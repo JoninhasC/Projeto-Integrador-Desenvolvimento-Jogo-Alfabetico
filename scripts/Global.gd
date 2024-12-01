@@ -16,6 +16,7 @@ var nivel : String
 var modalidade : String
 var erros : int
 var acertos : int
+var moedas := 0
 var nivel_modalidade = [
 	{
 		"nivel": "facil",
