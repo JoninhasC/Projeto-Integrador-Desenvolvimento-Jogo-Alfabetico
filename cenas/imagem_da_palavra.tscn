@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://csvx74h818uvi"]
-
-[ext_resource type="Script" path="res://scripts/imagem_da_palavra.gd" id="1_okabh"]
-
-[node name="imagem_da_palavra" type="RichTextLabel"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_okabh")
