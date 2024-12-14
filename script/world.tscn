@@ -21463,6 +21463,7 @@ texture = ExtResource("19_o7e70")
 
 [sub_resource type="TileSet" id="TileSet_ib2v2"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
 sources/2 = SubResource("TileSetAtlasSource_abqig")
 sources/5 = SubResource("TileSetAtlasSource_r3bnw")
 sources/7 = SubResource("TileSetAtlasSource_u6mnc")
@@ -21486,3 +21487,13 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(1179717, 1310722, 3, 2555907, 131074, 22, 2949144, 917506, 28)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2340, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(1.3, 1.691)
+texture = ExtResource("19_o7e70")
+centered = false
