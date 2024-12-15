@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1dygujn2g6w0"]
+
+[ext_resource type="Script" path="res://script/letter.gd" id="1_mfk0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e253"]
+size = Vector2(135.887, 137.256)
+
+[node name="letter" type="Area2D"]
+scale = Vector2(1.11712, 1.32021)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_mfk0s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64.5403, 64.6839)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7e253")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

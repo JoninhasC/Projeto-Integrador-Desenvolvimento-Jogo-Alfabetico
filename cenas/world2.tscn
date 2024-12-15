@@ -1,16 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://0br16mhnvn1j"]
+[gd_scene load_steps=11 format=3]
 
-[ext_resource type="PackedScene" uid="uid://nnk0aaf0u020" path="res://script/player.tscn" id="1_4krkl"]
-[ext_resource type="PackedScene" uid="uid://bj4l3jgnwh4nk" path="res://script/portal.tscn" id="5_fiyk0"]
-[ext_resource type="Texture2D" uid="uid://decua3yn022kg" path="res://sprites/Mapa Neve/svg/JCDOSSLIDES.png" id="17_y4035"]
-[ext_resource type="Texture2D" uid="uid://y15pw2116rdq" path="res://sprites/Mapa Neve/svg/Tile.svg" id="18_sikwi"]
-[ext_resource type="Texture2D" uid="uid://4dxdnojl8owf" path="res://sprites/Mapa Neve/png/BG/BG.png" id="19_o7e70"]
+[ext_resource type="PackedScene" uid="uid://nnk0aaf0u020" path="res://cenas/player.tscn" id="1_j4ulo"]
+[ext_resource type="Texture2D" uid="uid://decua3yn022kg" path="res://sprites/Mapa Neve/svg/JCDOSSLIDES.png" id="2_k6ife"]
+[ext_resource type="Texture2D" uid="uid://y15pw2116rdq" path="res://sprites/Mapa Neve/svg/Tile.svg" id="3_cw80v"]
+[ext_resource type="Texture2D" uid="uid://4dxdnojl8owf" path="res://sprites/Mapa Neve/png/BG/BG.png" id="4_6lb07"]
+[ext_resource type="PackedScene" uid="uid://bj4l3jgnwh4nk" path="res://cenas/portal.tscn" id="5_xmkd1"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_admyg"]
 tile_data = PackedInt32Array(0, 2359298, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abqig"]
-texture = ExtResource("17_y4035")
+texture = ExtResource("2_k6ife")
 texture_region_size = Vector2i(32, 32)
 21:21/size_in_atlas = Vector2i(4, 4)
 21:21/0 = 0
@@ -103,7 +103,7 @@ texture_region_size = Vector2i(32, 32)
 2:22/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r3bnw"]
-texture = ExtResource("18_sikwi")
+texture = ExtResource("3_cw80v")
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2980,7 +2980,7 @@ texture = ExtResource("18_sikwi")
 35:29/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6mnc"]
-texture = ExtResource("19_o7e70")
+texture = ExtResource("4_6lb07")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -21473,7 +21473,7 @@ pattern_0 = SubResource("TileMapPattern_admyg")
 [node name="world" type="Node2D"]
 position = Vector2(1, 0)
 
-[node name="player" parent="." instance=ExtResource("1_4krkl")]
+[node name="player" parent="." instance=ExtResource("1_j4ulo")]
 position = Vector2(311, 403)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -21496,9 +21496,9 @@ motion_mirroring = Vector2(2340, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2(1.3, 1.691)
-texture = ExtResource("19_o7e70")
+texture = ExtResource("4_6lb07")
 centered = false
 
-[node name="portal" parent="." instance=ExtResource("5_fiyk0")]
-position = Vector2(3711, 768)
-nextScene = "res://script/world2.tscn"
+[node name="portal" parent="." instance=ExtResource("5_xmkd1")]
+position = Vector2(3734, 769)
+nextScene = "res://script/world.tscn"
