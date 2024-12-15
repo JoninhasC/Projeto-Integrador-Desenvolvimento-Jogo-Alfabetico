@@ -14,6 +14,9 @@ var is_jumping = false  # Variável para controlar se o personagem está no esta
 # A referência ao sprite de animação do personagem
 @onready var animacao := $Animate as AnimatedSprite2D  # Referência ao nó de animação para controlar as animações.
 
+func _ready():
+	add_to_group("player")
+
 # Função principal de atualização a cada frame da física do jogo
 func _physics_process(delta):
 	# Aplica a gravidade ao personagem quando ele não está no chão
