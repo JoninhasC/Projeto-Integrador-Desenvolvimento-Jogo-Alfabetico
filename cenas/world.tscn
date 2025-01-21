@@ -21519,7 +21519,7 @@ scale = Vector2(0.997935, 0.969313)
 theme_override_font_sizes/font_size = 48
 
 [node name="ProgressLabel" type="Node2D" parent="CanvasLayer"]
-position = Vector2(1, 164)
+position = Vector2(1790, 48)
 
 [node name="LivesLabel" type="Label" parent="CanvasLayer"]
 offset_right = 40.0

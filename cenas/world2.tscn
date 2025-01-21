@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://i7gdcewj3x72"]
 
 [ext_resource type="PackedScene" uid="uid://nnk0aaf0u020" path="res://cenas/player.tscn" id="1_j4ulo"]
 [ext_resource type="Texture2D" uid="uid://decua3yn022kg" path="res://sprites/Mapa Neve/svg/JCDOSSLIDES.png" id="2_k6ife"]
