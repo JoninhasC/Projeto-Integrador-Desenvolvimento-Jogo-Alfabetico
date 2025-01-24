@@ -13,22 +13,23 @@ script = ExtResource("1_ft7df")
 clip_contents = true
 offset_left = -7.0
 offset_top = -5.0
-offset_right = 1928.0
-offset_bottom = 1092.0
+offset_right = 1026.0
+offset_bottom = 643.0
 
 [node name="Bg-claro" type="Sprite2D" parent="CenterContainer"]
-position = Vector2(857, 166)
-scale = Vector2(1.42986, 1.15625)
+position = Vector2(433.829, 84.0524)
+scale = Vector2(0.75, 0.696289)
 texture = ExtResource("1_xprgj")
 offset = Vector2(97.5619, 333.838)
 
 [node name="Title" type="Sprite2D" parent="CenterContainer"]
-position = Vector2(954, 321)
-scale = Vector2(2.27273, 2.27273)
+position = Vector2(508, 195)
+scale = Vector2(1, 1)
 texture = ExtResource("2_qqiof")
 
 [node name="BotaoVoltarAJogar" type="Sprite2D" parent="."]
-position = Vector2(941.5, 624)
+position = Vector2(502.75, 359.5)
+scale = Vector2(0.709302, 0.709302)
 texture = ExtResource("3_qkgsu")
 
 [node name="TextureButton" type="TextureButton" parent="BotaoVoltarAJogar"]
@@ -37,9 +38,11 @@ offset_top = -44.0
 offset_right = 231.0
 offset_bottom = 46.0
 mouse_default_cursor_shape = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="BotaoSair" type="Sprite2D" parent="."]
-position = Vector2(942.5, 734)
+position = Vector2(503.75, 449.5)
+scale = Vector2(0.709302, 0.709302)
 texture = ExtResource("4_v1re6")
 
 [node name="TextureButton" type="TextureButton" parent="BotaoSair"]
