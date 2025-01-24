@@ -37,7 +37,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis(ACTION_LEFT, ACTION_RIGHT)  # Obtém a direção do movimento: -1 para esquerda, 1 para direita e 0 para parado.
 	if direction != 0 and not is_jumping:  # Se o personagem está se movendo horizontalmente e não está pulando.
 		velocity.x = direction * SPEED  # Ajusta a velocidade horizontal com base na direção (direita ou esquerda).
-		animacao.scale.x = direction  # Inverte a direção do sprite horizontalmente (para a esquerda ou direita).
+		animacao.scale.x = direction / 5  # Inverte a direção do sprite horizontalmente (para a esquerda ou direita).
 		if animacao.animation != "movimentacao":  # Se a animação não está em "movimentação" (correndo ou andando).
 			animacao.play("movimentacao")  # Reproduz a animação de movimento (correr ou andar).
 	elif is_on_floor() and direction == 0:  # Se o personagem está parado no chão.

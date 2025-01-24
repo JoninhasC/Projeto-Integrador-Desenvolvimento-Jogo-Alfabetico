@@ -218,7 +218,7 @@ limit_smoothed = true
 
 [node name="Animate" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.52588e-05, 0)
-scale = Vector2(0.20438, 0.193277)
+scale = Vector2(0.204, 0.193)
 sprite_frames = SubResource("SpriteFrames_14h3l")
 animation = &"idle"
 autoplay = "idle"
