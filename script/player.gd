@@ -49,6 +49,9 @@ func _physics_process(delta):
 	if is_jumping:  # Se o personagem estiver no ar.
 		if animacao.animation != "pulo":  # Se a animação não for de "pulo".
 			animacao.play("pulo")  # Toca a animação de pulo.
+	
+	if direction == 0:
+		velocity.x = 0
 
 	# O move_and_slide() lida com a movimentação e colisões, já considerando a velocidade do personagem.
 	move_and_slide()  # O CharacterBody2D lida com a movimentação automaticamente, considerando as colisões.

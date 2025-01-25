@@ -14,7 +14,7 @@ script = ExtResource("1_mfk0s")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(64.5403, 64.6839)
+position = Vector2(-1.52588e-05, -1.52588e-05)
 shape = SubResource("RectangleShape2D_7e253")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
