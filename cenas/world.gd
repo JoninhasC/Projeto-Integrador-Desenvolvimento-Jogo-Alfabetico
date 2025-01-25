@@ -65,7 +65,7 @@ func create_letter_placeholders():
 		# Define o texto como underline
 		placeholder.text = "_"
 		# Define o tamanho da fonte
-		placeholder.add_theme_font_size_override("font_size", 50)
+		placeholder.add_theme_font_size_override("font_size", 30)
 		# Calcula e define a posição do placeholder
 		placeholder.position = Vector2(start_x + (i * GameManager.LETTER_SPACING), start_y)
 		# Adiciona o placeholder ao nó ProgressLabel
@@ -198,3 +198,8 @@ func spawn_letter(letter: String, color: String, is_correct: bool):
 	letter_instance.add_to_group("letter")
 	# Adiciona a letra à cena
 	add_child(letter_instance)
+
+
+func _on_area_ocean_entered(area: Area2D) -> void:
+	if area.get_parent().is_in_group("player"):
+		game_over()
