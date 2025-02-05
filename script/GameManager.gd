@@ -1,6 +1,11 @@
 extends Node
 
-const WORDS = ["RATO", "GIRAFA", "JOGO", "HEROI", "GATO"]        # Lista de palavras que podem aparecer no jogo
+const WORDS = [
+  "RATO", "GIRAFA", "JOGO", "HEROI", "GATO",
+  "CACHORRO", "ELEFANTE", "AVIÃO", "TIGRE", "URSO",
+  "PANTERA", "CAVALO", "ZEBRA", "LEÃO", "FOCA",
+  "TARTARUGA", "PATO", "COBRA", "MACACO", "LOBISOMEM"
+];       # Lista de palavras que podem aparecer no jogo
 const COLORS = ["amarelo", "azul", "cinza_claro", "cinza_escuro", "madeira", "marrom"]    # Lista de cores disponíveis para as letras
 const MIN_DISTANCE = 100        # Define a distância mínima que deve haver entre as letras ao spawnar
 const LETTER_SPACING = 50      # Define o espaçamento entre os placeholders das letras no topo da tela
