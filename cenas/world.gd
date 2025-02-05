@@ -19,11 +19,18 @@ func _ready():
 func setup_ui():
 	# Atualiza o display de vidas com o valor inicial
 	update_lives_display(GameManager.lives)
-	
-# Atualiza o texto mostrando o número de vidas
+
+# Função para atualizar a exibição das vidas
 func update_lives_display(lives: int):
-	# Define o texto do label com o número atual de vidas
-	$CanvasLayer/LivesLabel.text = "Vidas: " + str(lives)
+	# Obtém todos os corações no HeartContainer
+	var hearts = $CanvasLayer/HeartContainer.get_children()
+	
+	# Itera sobre os corações e mostra ou esconde com base nas vidas
+	for i in range(hearts.size()):
+		if i < lives:
+			hearts[i].visible = true  # Mostra o coração
+		else:
+			hearts[i].visible = false  # Esconde o coração
 
 # Inicia uma nova palavra no jogo
 func start_new_word():
