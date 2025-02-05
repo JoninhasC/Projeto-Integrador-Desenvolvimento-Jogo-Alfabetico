@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://script/portal.gd" id="1_2sdf0"]
 [ext_resource type="Texture2D" uid="uid://blwt3ax0o0qej" path="res://sprites/Mapa Neve/png/Object/Igloo.png" id="2_rc0hn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rp32"]
-size = Vector2(513, 198)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l2bt"]
+size = Vector2(507, 198.75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fdi80"]
 animations = [{
@@ -22,10 +22,13 @@ position = Vector2(2, -2)
 script = ExtResource("1_2sdf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
-shape = SubResource("RectangleShape2D_0rp32")
+position = Vector2(-6.5, 11.375)
+scale = Vector2(1, 0.969519)
+shape = SubResource("RectangleShape2D_8l2bt")
+one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, 11)
 sprite_frames = SubResource("SpriteFrames_fdi80")
 animation = &"Portal"
 

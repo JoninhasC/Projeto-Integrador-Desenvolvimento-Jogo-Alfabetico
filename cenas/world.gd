@@ -1,10 +1,12 @@
 extends Node2D
 
+
 # Carrega a cena da letra que será usada para criar instâncias
 var Letter = preload("res://cenas/letter.tscn")
 
 # Função chamada quando o nó é inicializado
 func _ready():
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	# Configura a interface do usuário
 	setup_ui()
 	# Inicia a primeira palavra do jogo
