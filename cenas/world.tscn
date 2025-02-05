@@ -18601,7 +18601,7 @@ sources/2 = SubResource("TileSetAtlasSource_abqig")
 sources/7 = SubResource("TileSetAtlasSource_u6mnc")
 pattern_0 = SubResource("TileMapPattern_admyg")
 
-[node name="world" type="Node2D"]
+[node name="world2" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_kkfil")
 
