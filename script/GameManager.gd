@@ -8,7 +8,7 @@ const WORDS = [
 ];       # Lista de palavras que podem aparecer no jogo
 const COLORS = ["amarelo", "azul", "cinza_claro", "cinza_escuro", "madeira", "marrom"]    # Lista de cores disponíveis para as letras
 const MIN_DISTANCE = 100        # Define a distância mínima que deve haver entre as letras ao spawnar
-const LETTER_SPACING = 50      # Define o espaçamento entre os placeholders das letras no topo da tela
+const LETTER_SPACING = 100      # Define o espaçamento entre os placeholders das letras no topo da tela
 
 var current_word = ""          # Armazena a palavra atual que o jogador precisa completar
 var current_color = ""         # Armazena a cor atual das letras

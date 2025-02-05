@@ -6,39 +6,32 @@
 [ext_resource type="Texture2D" uid="uid://diosh0ajcmi8r" path="res://sprites/pause/botao_voltar_a_jogar.png" id="3_qkgsu"]
 [ext_resource type="Texture2D" uid="uid://c703jwt04ip1u" path="res://sprites/pause/botao_sair.png" id="4_v1re6"]
 
-[node name="Control" type="Control"]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Pause" type="Node2D"]
 script = ExtResource("1_ft7df")
 
-[node name="CenterContainer2" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 clip_contents = true
-layout_mode = 0
 offset_left = -7.0
 offset_top = -5.0
 offset_right = 1026.0
 offset_bottom = 643.0
 
-[node name="Bg-claro" type="Sprite2D" parent="CenterContainer2"]
+[node name="Bg-claro" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(433.829, 84.0524)
 scale = Vector2(0.75, 0.696289)
 texture = ExtResource("1_xprgj")
 offset = Vector2(97.5619, 333.838)
 
-[node name="Title" type="Sprite2D" parent="CenterContainer2"]
+[node name="Title" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(508, 195)
 texture = ExtResource("2_qqiof")
 
-[node name="BotaoVoltarAJogar2" type="Sprite2D" parent="."]
+[node name="BotaoVoltarAJogar" type="Sprite2D" parent="."]
 position = Vector2(502.75, 359.5)
 scale = Vector2(0.709302, 0.709302)
 texture = ExtResource("3_qkgsu")
 
-[node name="TextureButton" type="TextureButton" parent="BotaoVoltarAJogar2"]
-process_mode = 3
+[node name="TextureButton" type="TextureButton" parent="BotaoVoltarAJogar"]
 offset_left = -232.0
 offset_top = -44.0
 offset_right = 231.0
@@ -46,17 +39,17 @@ offset_bottom = 46.0
 mouse_default_cursor_shape = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="BotaoSair2" type="Sprite2D" parent="."]
+[node name="BotaoSair" type="Sprite2D" parent="."]
 position = Vector2(503.75, 449.5)
 scale = Vector2(0.709302, 0.709302)
 texture = ExtResource("4_v1re6")
 
-[node name="TextureButton" type="TextureButton" parent="BotaoSair2"]
+[node name="TextureButton" type="TextureButton" parent="BotaoSair"]
 offset_left = -234.0
 offset_top = -43.0
 offset_right = 238.0
 offset_bottom = 41.0
 mouse_default_cursor_shape = 2
 
-[connection signal="pressed" from="BotaoVoltarAJogar2/TextureButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="BotaoSair2/TextureButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="BotaoVoltarAJogar/TextureButton" to="." method="_on_return_to_game_button_pressed"]
+[connection signal="pressed" from="BotaoSair/TextureButton" to="." method="_on_exit_button_pressed"]
