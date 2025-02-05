@@ -24,7 +24,6 @@ offset = Vector2(97.5619, 333.838)
 
 [node name="Title" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(508, 195)
-scale = Vector2(1, 1)
 texture = ExtResource("2_qqiof")
 
 [node name="BotaoVoltarAJogar" type="Sprite2D" parent="."]
