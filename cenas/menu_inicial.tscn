@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://covud210qjlkq"]
+[gd_scene load_steps=8 format=3 uid="uid://covud210qjlkq"]
 
 [ext_resource type="Texture2D" uid="uid://ryu8hspwpwar" path="res://sprites/menu inicial/BG-claro.png" id="1_cw3ch"]
 [ext_resource type="Script" path="res://cenas/menu_inicial.gd" id="1_e8wo1"]
@@ -6,10 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dq8il1oqp5kny" path="res://sprites/menu inicial/title.png" id="3_3l2mr"]
 [ext_resource type="Texture2D" uid="uid://dxnxrwxyq6bwt" path="res://sprites/menu inicial/botao.png" id="4_4yrpx"]
 [ext_resource type="Texture2D" uid="uid://ci0u5ahwpwluj" path="res://sprites/menu inicial/botao_som.png" id="6_11upx"]
+[ext_resource type="AudioStream" uid="uid://8fp3hyhkl5em" path="res://musicas/menu inicial.mp3" id="7_telid"]
 
-[node name="MenuInicial" type="Node2D"]
+[node name="MenuInicial" type="Node2D" node_paths=PackedStringArray("som")]
 position = Vector2(1, 0)
 script = ExtResource("1_e8wo1")
+som = NodePath("BotaoSom/menu_incial")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 clip_contents = true
@@ -61,6 +63,11 @@ offset_right = 55.0
 offset_bottom = 54.0
 mouse_default_cursor_shape = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="menu_incial" type="AudioStreamPlayer" parent="BotaoSom"]
+stream = ExtResource("7_telid")
+volume_db = -10.306
+autoplay = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 231.0
