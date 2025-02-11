@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bp1c30cxdy80y"]
+[gd_scene load_steps=14 format=3 uid="uid://bp1c30cxdy80y"]
 
 [ext_resource type="PackedScene" uid="uid://nnk0aaf0u020" path="res://cenas/player.tscn" id="1_7i772"]
 [ext_resource type="Script" path="res://cenas/world.gd" id="1_kkfil"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4dxdnojl8owf" path="res://sprites/Mapa Neve/png/BG/BG.png" id="4_4lqd2"]
 [ext_resource type="Texture2D" uid="uid://cnuvkji0usjx3" path="res://sprites/CORACAO/pngwing.com.png" id="6_xqhat"]
 [ext_resource type="AudioStream" uid="uid://d1hgd143oxpm8" path="res://musicas/fase_neve.mp3" id="7_6olhe"]
+[ext_resource type="PackedScene" uid="uid://5jt6q67wlaqs" path="res://cenas/pause.tscn" id="7_ldp2x"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_admyg"]
 tile_data = PackedInt32Array(0, 2359298, 0)
@@ -21520,7 +21521,7 @@ offset_bottom = 124.0
 theme_override_font_sizes/font_size = 48
 
 [node name="ProgressLabel" type="Node2D" parent="CanvasLayer"]
-position = Vector2(1413, 56)
+position = Vector2(314, 93)
 
 [node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_top = 8.0
@@ -21539,6 +21540,10 @@ texture = ExtResource("6_xqhat")
 [node name="Heart3" type="TextureRect" parent="CanvasLayer/HeartContainer"]
 layout_mode = 2
 texture = ExtResource("6_xqhat")
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("7_ldp2x")]
+visible = false
+position = Vector2(1, 0)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_6olhe")
