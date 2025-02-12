@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c703jwt04ip1u" path="res://sprites/pause/botao_sair.png" id="4_v1re6"]
 
 [node name="Pause" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_ft7df")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -24,7 +25,6 @@ offset = Vector2(97.5619, 333.838)
 
 [node name="Title" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(508, 195)
-scale = Vector2(1, 1)
 texture = ExtResource("2_qqiof")
 
 [node name="BotaoVoltarAJogar" type="Sprite2D" parent="."]
@@ -52,5 +52,5 @@ offset_right = 238.0
 offset_bottom = 41.0
 mouse_default_cursor_shape = 2
 
-[connection signal="pressed" from="BotaoVoltarAJogar/TextureButton" to="." method="_on_return_to_game_button_pressed"]
-[connection signal="pressed" from="BotaoSair/TextureButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="BotaoVoltarAJogar/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="BotaoSair/TextureButton" to="." method="_on_quit_button_pressed"]

@@ -1,21 +1,32 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	self.visible = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("menu_pause"):
+		if !get_tree().paused:
+			pause()
+		else:
+			resume()
 
 
-func _on_return_to_game_button_pressed() -> void:
-	print("clicaram para voltar a jogar")
-	pass # Replace with function body.
+func pause():
+	get_tree().paused = true
+	self.visible = true
+	
+
+func resume():
+	get_tree().paused = false
+	self.visible = false
 
 
-func _on_exit_button_pressed() -> void:
-	print("clicaram para sair")
-	pass # Replace with function body.
+func _on_quit_button_pressed() -> void:
+	resume()
+	get_tree().change_scene_to_file("res://cenas/menu_inicial.tscn")
+
+
+func _on_texture_button_pressed() -> void:
+	resume()
