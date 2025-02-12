@@ -3,6 +3,8 @@ extends Node2D
 
 func _ready() -> void:
 	self.visible = false
+	
+	
 
 
 func _process(delta: float) -> void:
