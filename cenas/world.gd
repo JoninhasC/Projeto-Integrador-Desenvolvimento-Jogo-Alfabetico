@@ -2,6 +2,8 @@ extends Node2D
 
 # Carrega a cena da letra que será usada para criar instâncias
 var Letter = preload("res://cenas/letter.tscn")
+var words_completed = 0 # Contador de palavras completadas
+const WORDS_PER_WORLD = 1 # Numero de palavras para completar cada mundo
 
 # Função chamada quando o nó é inicializado
 func _ready():
@@ -81,33 +83,25 @@ func create_letter_placeholders():
 
 # Função chamada quando uma letra é coletada
 func _on_letter_collected(letter_info):
-	# Verifica se a letra coletada é incorreta
 	if not letter_info.is_correct:
-		# Se perder vida e não tiver mais vidas, chama game over
 		if GameManager.lose_life():
 			game_over()
 		return
-	
-	# Procura a posição da letra na palavra atual
+
 	var letter_index = GameManager.current_word.find(letter_info.letter)
-	# Se encontrou a letra na palavra
 	if letter_index != -1:
-		# Obtém o placeholder correspondente à posição da letra
 		var placeholder = $CanvasLayer/ProgressLabel.get_child(letter_index)
-		# Atualiza o texto do placeholder com a letra
 		placeholder.text = letter_info.letter
-		# Muda a cor do texto para verde
 		placeholder.add_theme_color_override("font_color", Color.GREEN)
-		
-		# Adiciona a letra à lista de letras coletadas
 		GameManager.collected_letters.append(letter_info.letter)
-		
-		# Verifica se todas as letras foram coletadas
 		if GameManager.collected_letters.size() == GameManager.current_word.length():
-			# Adiciona pontos pela palavra completa
 			GameManager.add_score(100)
-			# Inicia uma nova palavra
-			start_new_word()
+			words_completed += 1
+			
+			if words_completed >= WORDS_PER_WORLD:
+				advance_world()
+			else:
+				start_new_word()
 
 # Função chamada quando o número de vidas muda
 func _on_life_changed(new_lives: int):
@@ -116,18 +110,11 @@ func _on_life_changed(new_lives: int):
 
 # Função chamada quando o jogador perde todas as vidas
 func game_over():
-	# Reseta o número de vidas
-	GameManager.reset_lives()
-	# Limpa a lista de letras coletadas
-	GameManager.collected_letters.clear()
-	# Limpa as posições registradas
-	GameManager.clear_positions()
-	# Recarrega a cena atual
+	GameManager.reset_game_progress()  # Reseta todo o progresso
 	get_tree().reload_current_scene()
 
 # Função chamada quando uma palavra é completada
 func _on_word_completed():
-	# Inicia uma nova palavra
 	start_new_word()
 
 # Gera as letras para a palavra atual
@@ -157,6 +144,22 @@ func generate_letters(word: String, color: String):
 			extra_letter = alphabet[randi() % alphabet.length()]
 		# Spawna a letra extra
 		spawn_letter(extra_letter, color, false)
+
+
+# Função para avançar para o próximo mundo
+func advance_world():
+	var next_world = GameManager.advance_to_next_world()
+	if next_world != "":
+		# Transição para o próximo mundo
+		get_tree().change_scene_to_file(next_world)
+	else:
+		# Não há mais mundos
+		game_completed()
+
+# Função para quando o jogo for completado
+func game_completed():
+	GameManager.reset_game_progress()
+	get_tree().change_scene_to_file("res://cenas/menu_inicial.tscn")
 
 # Função para criar uma nova letra no cenário
 func spawn_letter(letter: String, color: String, is_correct: bool):

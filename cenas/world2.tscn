@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://i7gdcewj3x72"]
+[gd_scene load_steps=14 format=3 uid="uid://i7gdcewj3x72"]
 
+[ext_resource type="Script" path="res://cenas/world.gd" id="1_8woxo"]
 [ext_resource type="PackedScene" uid="uid://nnk0aaf0u020" path="res://cenas/player.tscn" id="1_j4ulo"]
 [ext_resource type="Texture2D" uid="uid://decua3yn022kg" path="res://sprites/Mapa Neve/svg/JCDOSSLIDES.png" id="2_k6ife"]
 [ext_resource type="Texture2D" uid="uid://y15pw2116rdq" path="res://sprites/Mapa Neve/svg/Tile.svg" id="3_cw80v"]
 [ext_resource type="Texture2D" uid="uid://4dxdnojl8owf" path="res://sprites/Mapa Neve/png/BG/BG.png" id="4_6lb07"]
 [ext_resource type="PackedScene" uid="uid://bj4l3jgnwh4nk" path="res://cenas/portal.tscn" id="5_xmkd1"]
+[ext_resource type="Texture2D" uid="uid://cnuvkji0usjx3" path="res://sprites/CORACAO/pngwing.com.png" id="6_2st1n"]
+[ext_resource type="AudioStream" uid="uid://d1hgd143oxpm8" path="res://musicas/fase_neve.mp3" id="7_h5ghk"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_admyg"]
 tile_data = PackedInt32Array(0, 2359298, 0)
@@ -21472,6 +21475,7 @@ pattern_0 = SubResource("TileMapPattern_admyg")
 
 [node name="world" type="Node2D"]
 position = Vector2(1, 0)
+script = ExtResource("1_8woxo")
 
 [node name="player" parent="." instance=ExtResource("1_j4ulo")]
 position = Vector2(311, 403)
@@ -21502,3 +21506,44 @@ centered = false
 [node name="portal" parent="." instance=ExtResource("5_xmkd1")]
 position = Vector2(3734, 769)
 nextScene = "res://script/world.tscn"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WordLabel" type="Label" parent="CanvasLayer"]
+offset_left = 5.99982
+offset_top = 57.0
+offset_right = 6.99982
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 48
+
+[node name="ProgressLabel" type="Node2D" parent="CanvasLayer"]
+position = Vector2(1413, 56)
+
+[node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 8.0
+offset_right = 392.0
+offset_bottom = 136.0
+scale = Vector2(0.376082, 0.254932)
+
+[node name="Heart1" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("6_2st1n")
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("6_2st1n")
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("6_2st1n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h5ghk")
+autoplay = true
