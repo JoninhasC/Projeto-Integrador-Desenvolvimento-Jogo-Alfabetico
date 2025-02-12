@@ -21,11 +21,10 @@ offset_right = 1936.0
 offset_bottom = 1095.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Bg-claro" type="Sprite2D" parent="CenterContainer"]
-position = Vector2(514.999, 329.499)
-scale = Vector2(0.723613, 0.649416)
+position = Vector2(647, 407)
+scale = Vector2(0.897224, 0.793947)
 texture = ExtResource("1_cw3ch")
 
 [node name="Bloquinhos" type="Sprite2D" parent="CenterContainer"]
