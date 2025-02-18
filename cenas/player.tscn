@@ -202,10 +202,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhrml"]
+<<<<<<< Updated upstream
 size = Vector2(16.4292, 24.8456)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0m24"]
 size = Vector2(17.6368, 25.8293)
+=======
+size = Vector2(16.4292, 19.693)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0m24"]
+size = Vector2(17.6368, 20.4941)
+>>>>>>> Stashed changes
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -76)
@@ -232,12 +239,20 @@ root_node = NodePath("../..")
 scale = Vector2(1, 0.84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+<<<<<<< Updated upstream
 position = Vector2(-0.999974, 5.45665)
+=======
+position = Vector2(-4.99995, 12.8963)
+>>>>>>> Stashed changes
 rotation = -3.14159
 scale = Vector2(2.67816, 3.88912)
 shape = SubResource("RectangleShape2D_rhrml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
 position = Vector2(-0.999996, 4.61153)
+=======
+position = Vector2(-4.93975, 10.7769)
+>>>>>>> Stashed changes
 scale = Vector2(2.48795, 3.14461)
 shape = SubResource("RectangleShape2D_q0m24")
