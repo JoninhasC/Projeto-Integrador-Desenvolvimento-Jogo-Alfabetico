@@ -201,9 +201,11 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_surma"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhrml"]
+size = Vector2(16.4292, 24.8456)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltdqc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0m24"]
+size = Vector2(17.6368, 25.8293)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -76)
@@ -230,12 +232,12 @@ root_node = NodePath("../..")
 scale = Vector2(1, 0.84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5, 7)
+position = Vector2(-0.999974, 5.45665)
 rotation = -3.14159
 scale = Vector2(2.67816, 3.88912)
-shape = SubResource("CapsuleShape2D_surma")
+shape = SubResource("RectangleShape2D_rhrml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 7)
+position = Vector2(-0.999996, 4.61153)
 scale = Vector2(2.48795, 3.14461)
-shape = SubResource("CapsuleShape2D_ltdqc")
+shape = SubResource("RectangleShape2D_q0m24")
