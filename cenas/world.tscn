@@ -18603,6 +18603,7 @@ script = ExtResource("1_kkfil")
 position = Vector2(311, 403)
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-6, -250)
 tile_set = SubResource("TileSet_ib2v2")
 format = 2
 layer_0/name = "TERRENO"
@@ -18613,7 +18614,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array()
+layer_1/tile_data = PackedInt32Array(3473416, 65538, 10, 3473479, 65538, 10, 3866644, 851970, 21, 3604530, 1310722, 3, 3670204, 65538, 1, 3932322, 917506, 28)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
