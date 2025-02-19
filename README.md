@@ -65,9 +65,9 @@ Contribuições são bem-vindas! Se deseja melhorar o jogo, sinta-se à vontade 
 
 Este jogo foi desenvolvido por:
 
-Barbara Lopes (https://github.com/barbaraclopes)
-João Borges (https://github.com/JoaoB0rges)
-Breno Silva (https://github.com/bren0Silv4)
+- **Barbara Lopes** (https://github.com/barbaraclopes)
+- **João Borges** (https://github.com/JoaoB0rges)
+- **Breno Silva** (https://github.com/bren0Silv4)
 
 Caso tenha colaborado com o projeto e seu nome não esteja aqui, entre em contato para adicionarmos os créditos adequados.
 
