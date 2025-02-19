@@ -36,15 +36,12 @@ Abra o projeto na Godot.
 
 Execute a cena principal para iniciar o jogo.
 
-# Download do Jogo
+Download do Jogo
 
-Para jogar sem a necessidade da Godot, baixe os seguintes arquivos:
+Para jogar sem a necessidade da Godot, baixe a versão jogável disponível no GitHub:
+Baixar Jogo
 
-Arquivo Executável (.exe)
-
-Arquivo de Pacote (.pck)
-
-Coloque ambos os arquivos na mesma pasta e execute o .exe para iniciar o jogo.
+Coloque ambos os arquivos .exe e .pck na mesma pasta e execute o .exe para iniciar o jogo.
 
 # Contribuição
 
