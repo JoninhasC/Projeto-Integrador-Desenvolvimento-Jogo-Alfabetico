@@ -26,8 +26,7 @@ O jogo é um plataforma 2D onde o jogador controla um personagem que precisa col
 - **Plataforma 2D**: controle intuitivo e acessível para crianças.
 - **Desafios progressivos**: palavras de diferentes dificuldades conforme o avanço.
 - **Estímulo à criatividade**: formação de palavras com liberdade de escolha.
-- **Sistema de pontuação**: recompensa o jogador conforme a complexidade da palavra formada.
-- **Níveis e desafios**: fases com temas variados para manter o engajamento.
+- **Música de fundo**: Uma trilha sonora suave e contínua pode ajudar a criar um ambiente agradável e focado. Alternar entre diferentes músicas para cada fase ou tema pode manter o jogo dinâmico
 
 ## Tecnologias Utilizadas
 
