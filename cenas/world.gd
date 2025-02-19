@@ -37,23 +37,18 @@ func update_lives_display(lives: int):
 
 # Inicia uma nova palavra no jogo
 func start_new_word():
+	# Limpa as letras coletadas
+	GameManager.collected_letters.clear()
 	# Loop para remover todas as letras antigas da cena
 	for child in get_children():
-		# Se o nó filho pertence ao grupo "letter"
 		if child.is_in_group("letter"):
-			# Remove a letra da cena
 			child.queue_free()
-	
 	# Loop para limpar os placeholders da palavra anterior
 	for child in $CanvasLayer/ProgressLabel.get_children():
-		# Remove cada placeholder
 		child.queue_free()
-	
 	# Obtém uma nova palavra aleatória do GameManager
 	GameManager.current_word = GameManager.get_random_word()
-	# Obtém uma nova cor aleatória do GameManager
 	GameManager.current_color = GameManager.get_random_color()
-	
 	# Atualiza o label com a nova palavra
 	$CanvasLayer/WordLabel.text = GameManager.current_word
 	# Cria os placeholders para a nova palavra
@@ -63,6 +58,9 @@ func start_new_word():
 
 # Cria os placeholders (underlines) para cada letra da palavra
 func create_letter_placeholders():
+	# Limpa os placeholders antigos
+	for child in $CanvasLayer/ProgressLabel.get_children():
+		child.queue_free()
 	# Define a margem esquerda para os placeholders
 	var start_x = 20
 	# Define a margem superior para os placeholders
@@ -87,21 +85,24 @@ func _on_letter_collected(letter_info):
 		if GameManager.lose_life():
 			game_over()
 		return
-
+	# Encontra o índice da letra coletada na palavra atual
 	var letter_index = GameManager.current_word.find(letter_info.letter)
 	if letter_index != -1:
+		# Atualiza o placeholder correspondente no ProgressLabel
 		var placeholder = $CanvasLayer/ProgressLabel.get_child(letter_index)
-		placeholder.text = letter_info.letter
-		placeholder.add_theme_color_override("font_color", Color.GREEN)
-		GameManager.collected_letters.append(letter_info.letter)
-		if GameManager.collected_letters.size() == GameManager.current_word.length():
-			GameManager.add_score(100)
-			words_completed += 1
-			
-			if words_completed >= WORDS_PER_WORLD:
-				advance_world()
-			else:
-				start_new_word()
+		placeholder.text = letter_info.letter  # Coloca a letra no placeholder
+		placeholder.add_theme_color_override("font_color", Color.GREEN)  # Muda a cor para verde
+	# Adiciona a letra coletada ao array de letras coletadas
+	GameManager.collected_letters.append(letter_info.letter)
+	# Verifica se todas as letras da palavra foram coletadas
+	if GameManager.collected_letters.size() == GameManager.current_word.length():
+		GameManager.add_score(100)  # Adiciona pontos por completar a palavra
+		words_completed += 1  # Incrementa o contador de palavras completadas
+		# Verifica se o número de palavras completadas atingiu o limite para o mundo atual
+		if words_completed >= WORDS_PER_WORLD:
+			advance_world()  # Avança para o próximo mundo
+		else:
+			start_new_word()  # Inicia uma nova palavra no mesmo mundo
 
 # Função chamada quando o número de vidas muda
 func _on_life_changed(new_lives: int):
@@ -110,12 +111,17 @@ func _on_life_changed(new_lives: int):
 
 # Função chamada quando o jogador perde todas as vidas
 func game_over():
-	GameManager.reset_game_progress()  # Reseta todo o progresso
+	GameManager.reset_game()  # Reseta todo o progresso
 	get_tree().reload_current_scene()
 
 # Função chamada quando uma palavra é completada
 func _on_word_completed():
-	start_new_word()
+	words_completed += 1  # Incrementa o contador de palavras completadas
+	# Verifica se o número de palavras completadas atingiu o limite para o mundo atual
+	if words_completed == WORDS_PER_WORLD:
+		advance_world()  # Avança para o próximo mundo
+	else:
+		start_new_word()  # Inicia uma nova palavra no mesmo mundo
 
 # Gera as letras para a palavra atual
 func generate_letters(word: String, color: String):
@@ -148,17 +154,21 @@ func generate_letters(word: String, color: String):
 
 # Função para avançar para o próximo mundo
 func advance_world():
-	var next_world = GameManager.advance_to_next_world()
-	if next_world != "":
-		# Transição para o próximo mundo
-		get_tree().change_scene_to_file(next_world)
+	# Incrementa o índice do mundo atual no GameManager
+	GameManager.current_world_index += 1
+	# Verifica se há um próximo mundo para carregar
+	if GameManager.current_world_index < GameManager.WORLD_SCENES.size():
+		var next_world = GameManager.WORLD_SCENES[GameManager.current_world_index]
+		print("Avançando para o próximo mundo: ", next_world)
+		get_tree().change_scene_to_file(next_world)  # Carrega a próxima cena
 	else:
-		# Não há mais mundos
+		# Se não houver mais mundos, o jogo é concluído
+		print("Todos os mundos foram completados!")
 		game_completed()
 
 # Função para quando o jogo for completado
 func game_completed():
-	GameManager.reset_game_progress()
+	GameManager.reset_game()
 	get_tree().change_scene_to_file("res://cenas/menu_inicial.tscn")
 
 # Função para criar uma nova letra no cenário
