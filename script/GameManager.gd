@@ -4,7 +4,7 @@ const WORDS = ["RATO", "GIRAFA", "JOGO", "HEROI", "GATO"]        # Lista de pala
 const COLORS = ["amarelo", "azul", "cinza_claro", "cinza_escuro", "madeira", "marrom"]    # Lista de cores disponíveis para as letras
 const MIN_DISTANCE = 100        # Define a distância mínima que deve haver entre as letras ao spawnar
 const LETTER_SPACING = 100      # Define o espaçamento entre os placeholders das letras no topo da tela
-const WORLD_SCENES = ["res://cenas/world.tscn", "res://cenas/world2.tscn", "res://cenas/world3.tscn", "res://cenas/world4.tscn"
+const WORLD_SCENES = ["res://cenas/world.tscn", "res://cenas/world2.tscn", "res://cenas/world4.tscn"
 , "res://cenas/world5.tscn", "res://cenas/world6.tscn", "res://cenas/world7.tscn", "res://cenas/world8.tscn", "res://cenas/world9.tscn"
 , "res://cenas/world10.tscn"]
 
